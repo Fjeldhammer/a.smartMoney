@@ -6,7 +6,7 @@ function displayMessage() {
     Swal.fire(
         {
             backdrop: false,
-            title: 'App Name',
+            title: 'Smart Money',
             text: message
         }
     );

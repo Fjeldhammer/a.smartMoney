@@ -63,6 +63,12 @@ body {
     color: var(--wf-dark-color);
 }
 
+.navbar-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    letter-spacing: .2rem;
+}
+
 .navbar,
 .footer {
     background-color: var(--wf-theme-900);
