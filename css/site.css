@@ -1,0 +1,98 @@
+:root {
+    --wf-theme-core: var(--wf-blue-core);
+    --wf-theme-100: var(--wf-blue-100);
+    --wf-theme-150: var(--wf-blue-150);
+    --wf-theme-200: var(--wf-blue-200);
+    --wf-theme-300: var(--wf-blue-300);
+    --wf-theme-400: var(--wf-blue-400);
+    --wf-theme-500: var(--wf-blue-500);
+    --wf-theme-600: var(--wf-blue-600);
+    --wf-theme-700: var(--wf-blue-700);
+    --wf-theme-800: var(--wf-blue-800);
+    --wf-theme-850: var(--wf-blue-850);
+    --wf-theme-900: var(--wf-blue-900);
+
+    --wf-blue-core: #0d6efd;
+    --wf-blue-100: hsl(216, 50%, 91%);
+    --wf-blue-150: hsl(216, 50%, 86%);
+    --wf-blue-200: hsl(216, 50%, 81%);
+    --wf-blue-300: hsl(216, 50%, 71%);
+    --wf-blue-400: hsl(216, 50%, 61%);
+    --wf-blue-500: hsl(216, 50%, 51%);
+    --wf-blue-600: hsl(216, 50%, 41%);
+    --wf-blue-700: hsl(216, 50%, 31%);
+    --wf-blue-800: hsl(216, 50%, 21%);
+    --wf-blue-850: hsl(216, 50%, 16%);
+    --wf-blue-900: hsl(216, 50%, 11%);
+
+    --wf-light-color: #deeefb;
+    --wf-dark-color: #212121;
+}
+
+/* #region Sticky Footer */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+/* #endregion Sticky Footer */
+
+.btn-primary {
+    --bs-btn-bg: var(--wf-theme-600);
+    --bs-btn-border-color: var(--wf-theme-600);
+    --bs-btn-hover-bg: var(--wf-theme-700);
+    --bs-btn-hover-border-color: var(--wf-theme-700);
+    --bs-btn-active-bg: var(--cf-theme-800);
+    --bs-btn-active-border-color: var(--cf-theme-800);
+}
+
+body {
+    background-color: var(--wf-theme-100);
+    color: var(--wf-dark-color);
+}
+
+.navbar,
+.footer {
+    background-color: var(--wf-theme-900);
+}
+
+.footer {
+    color: var(--wf-theme-200);
+}
+
+.socialicons {
+    font-size: 2rem;
+    padding-left: .5rem;
+    color: var(--wf-theme-300);
+    transition: color 0.2s;
+}
+
+.socialicons:hover {
+    color: var(--wf-theme-core);
+}
+
+.app-logo {
+    max-width: 400px;
+}
+
+.checklist i {
+    color: var(--wf-theme-core);
+    padding-right: .5rem;
+}
+
+.devicons {
+    font-size: 4rem;
+    padding-left: .5rem;
+}
