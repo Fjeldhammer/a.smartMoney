@@ -16,8 +16,7 @@ function getValues() {
             title: 'Oops!',
             text: 'Unfortunately, SMART MONEY only works with numbers',
             icon: 'error',
-            backdrop: false
-        });
+        })
 
     } else {
 
