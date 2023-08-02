@@ -92,7 +92,7 @@
                         <input name="interestRate" type="number" id="interestRate" class="form-control" placeholder="Enter interest rate" required />
                     </div>
                     <div class="col-12 text-end">
-                        <button class="btn btn-primary my-3" id="btnSubmit" type="button" onclick="getValues()">Calculate</button>
+                        <button class="btn btn-primary my-3" id="btnSubmit" type="button">Calculate</button>
                     </div>
                 </form>
             </div>
@@ -101,9 +101,9 @@
             <div class="col-12 col-md-8">
                 <h4 class="text-center">Your Monthly Payments</h4>
                 <h1 class="text-center" id="monthlyPayment"></h1>
-                <h5>Total Principal: <p id="totalPrincipal"></p></h5>
-                <h5>Total Interest: <p id="totalInterest"></p></h5>
-                <h5>Total Cost:<p id="totalCost"></p></h5>   
+                <h5>Total Principal: <p class="text-end" id="totalPrincipal"></p></h5>
+                <h5>Total Interest: <p class="text-end" id="totalInterest"></p></h5>
+                <h5>Total Cost:<p class="text-end" id="totalCost"></p></h5>   
             </div>
 
             <!-- results table area -->
@@ -174,9 +174,11 @@
 
     <script src="/js/site.js"></script>
 
-    <!-- <script>
+    <script>
         document.getElementById('btnSubmit').addEventListener('click', getValues);
-    </script> -->
+    </script>
+
+    <!--  onclick="getValues()" -->
 </body>
 
 </html>
