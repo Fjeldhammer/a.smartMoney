@@ -50,9 +50,9 @@ footer {
 /* #endregion Sticky Footer */
 
 .btn-primary {
-    --bs-btn-bg: var(--wf-theme-600);
+    --bs-btn-bg: #51ADE5;
     --bs-btn-border-color: var(--wf-theme-600);
-    --bs-btn-hover-bg: var(--wf-theme-700);
+    --bs-btn-hover-bg: #3871C1;
     --bs-btn-hover-border-color: var(--wf-theme-700);
     --bs-btn-active-bg: var(--cf-theme-800);
     --bs-btn-active-border-color: var(--cf-theme-800);
@@ -67,6 +67,11 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     font-size: xx-large;
     letter-spacing: .2rem;
+}
+
+.navbar-brand:hover {
+    color: #FDD835;
+    transition: color 0.2s;
 }
 
 .navbar,
@@ -86,7 +91,7 @@ body {
 }
 
 .socialicons:hover {
-    color: var(--wf-theme-core);
+    color: #FDD835;
 }
 
 .app-logo {
@@ -94,7 +99,7 @@ body {
 }
 
 .checklist i {
-    color: var(--wf-theme-core);
+    color: #3871C1;
     padding-right: .5rem;
 }
 

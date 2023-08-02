@@ -74,13 +74,60 @@
     </header>
 
     <main class="container py-3">
-        <h1>APP UI GOES HERE</h1>
+        <!-- <h3>SMART MONEY mortgage calculator</h3> -->
+        <div class="row row-cols-1 row-cals-md-2">
+            <!-- value entry table area -->
+            <div class="col-12 col-md-4">
+                <form class="row" id="newEventForm">
+                    <div class="col-12 ">
+                        <label for="loanAmount" class="form-label">Loan Amount</label>
+                        <input name="loanAmount" type="number" id="loanAmount" class="form-control" placeholder="Enter loan amount" required />
+                    </div>
+                    <div class="col-12">
+                        <label for="totalMonths" class="form-label">Payments</label>
+                        <input name="totalMonths" type="number" id="totalMonths" class="form-control" placeholder="Enter number of months" required />
+                    </div>
+                    <div class="col-12">
+                        <label for="interestRate" class="form-label">Rate</label>
+                        <input name="interestRate" type="number" id="interestRate" class="form-control" placeholder="Enter interest rate" required />
+                    </div>
+                    <div class="col-12 text-end">
+                        <button class="btn btn-primary my-3" id="btnSubmit" type="button" onclick="getValues()">Calculate</button>
+                    </div>
+                </form>
+            </div>
 
-        <input class="form-control" id="message" placeholder="Enter a message" type="text" />
+            <!-- totals display area -->
+            <div class="col-12 col-md-8">
+                <h4 class="text-center">Your Monthly Payments</h4>
+                <h1 class="text-center" id="monthlyPayment"></h1>
+                <h5>Total Principal: <p id="totalPrincipal"></p></h5>
+                <h5>Total Interest: <p id="totalInterest"></p></h5>
+                <h5>Total Cost:<p id="totalCost"></p></h5>   
+            </div>
 
-        <button class="btn btn-primary my-3" id="btnSubmit" type="button">
-            Display Message
-        </button>
+            <!-- results table area -->
+            <div class="col-12 mt-4">
+                <div class="table-responsive">
+                    <table class="table table-striped border shadow">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Month</th>
+                                <th>Payment</th>
+                                <th>Principal</th>
+                                <th>Interest</th>
+                                <th>Total Interest</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="loan-table">
+                            <!-- monthly results breakdown goes here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer class="footer container-fluid py-3">
@@ -104,6 +151,19 @@
         </div>
     </footer>
 
+    <!-- table template -->
+    <template id="loan-table-template">
+        <tr>
+            <td data-id="month"></td>  <!--month list from 1-? starting at index 0-->
+            <td data-id="payment"></td>
+            <td data-id="principal"></td>
+            <td data-id="interest"></td>
+            <td data-id="totalInterest"></td>
+            <td data-id="balance"></td>
+        </tr>
+    </template>
+
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -114,9 +174,9 @@
 
     <script src="/js/site.js"></script>
 
-    <script>
-        document.getElementById('btnSubmit').addEventListener('click', displayMessage);
-    </script>
+    <!-- <script>
+        document.getElementById('btnSubmit').addEventListener('click', getValues);
+    </script> -->
 </body>
 
 </html>
