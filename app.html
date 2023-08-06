@@ -81,15 +81,18 @@
                 <form class="row" id="newEventForm">
                     <div class="col-12 ">
                         <label for="loanAmount" class="form-label">Loan Amount</label>
-                        <input name="loanAmount" type="number" id="loanAmount" class="form-control" placeholder="Enter loan amount" required />
+                        <input name="loanAmount" type="number" id="loanAmount" class="form-control" 
+                        placeholder="Enter loan amount" required />
                     </div>
                     <div class="col-12">
                         <label for="totalMonths" class="form-label">Payments</label>
-                        <input name="totalMonths" type="number" id="totalMonths" class="form-control" placeholder="Enter number of months" required />
+                        <input name="totalMonths" type="number" id="totalTerm" class="form-control" 
+                        placeholder="Enter number of months" required />
                     </div>
                     <div class="col-12">
                         <label for="interestRate" class="form-label">Rate</label>
-                        <input name="interestRate" type="number" id="interestRate" class="form-control" placeholder="Enter interest rate" required />
+                        <input name="interestRate" type="number" id="interestRate" class="form-control" 
+                        placeholder="Enter interest rate" required />
                     </div>
                     <div class="col-12 text-end">
                         <button class="btn btn-primary my-3" id="btnSubmit" type="button">Calculate</button>
@@ -103,7 +106,7 @@
                 <h1 class="text-center" id="monthlyPayment"></h1>
                 <h5>Total Principal: <p class="text-end" id="totalPrincipal"></p></h5>
                 <h5>Total Interest: <p class="text-end" id="totalInterest"></p></h5>
-                <h5>Total Cost:<p class="text-end" id="totalCost"></p></h5>   
+                <h5>Total Cost:<p class="text-end" id="totalCost"></p></h5>
             </div>
 
             <!-- results table area -->
@@ -152,14 +155,14 @@
     </footer>
 
     <!-- table template -->
-    <template id="loan-table-template">
+    <template id="payment-row">
         <tr>
-            <td data-id="month"></td>  <!--month list from 1 starting at index 0-->
-            <td data-id="payment"></td>
-            <td data-id="principal"></td>
-            <td data-id="interest"></td>
-            <td data-id="totalInterest"></td>
-            <td data-id="balance"></td>
+            <td></td> <!--month list from 1 starting at index 0-->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </template>
 
