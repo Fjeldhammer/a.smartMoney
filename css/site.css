@@ -103,6 +103,11 @@ body {
     padding-right: .5rem;
 }
 
+.devicon {
+    font-size: 4rem;
+    background-color: #f7df1e;
+}
+
 .devicons {
     font-size: 4rem;
     padding-left: .5rem;
